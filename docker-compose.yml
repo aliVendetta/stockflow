@@ -1,0 +1,13 @@
+services:
+  stockflow:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - stockflow_data:/app/data
+    restart: unless-stopped
+
+volumes:
+  stockflow_data:
