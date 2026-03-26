@@ -510,3 +510,4 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 @app.get("/invoices/{path:path}")
 def spa(_path: str = ""):
     return FileResponse("static/index.html")
+
